@@ -30,4 +30,13 @@ void autoValidate(){
       emit(AddNoteErrorState());
     });
   }
+
+  int currentIndex=0;
+  Color currentColor=colors[0];
+void changeIndex(int index){
+  currentIndex=index;
+  currentColor=colors[currentIndex];
+
+  emit(ColorItemCurrentIndexState());
+}
 }

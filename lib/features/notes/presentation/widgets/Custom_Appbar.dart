@@ -4,7 +4,8 @@ import 'package:my_agenda/core/utils/colors.dart';
 class CustomAppBar extends StatelessWidget {
   final IconData icon;
   final String title;
-  const CustomAppBar({Key? key, required this.icon, required this.title}) : super(key: key);
+  void Function()? onPressed;
+ CustomAppBar({Key? key, required this.icon, required this.title,this.onPressed}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +16,7 @@ class CustomAppBar extends StatelessWidget {
           style:const  TextStyle(fontSize: 22, ),
         ),
        const Spacer(),
-        IconButton(onPressed: () {}, icon: Icon(icon))
+        IconButton(onPressed:onPressed , icon: Icon(icon))
       ],
     );
   }

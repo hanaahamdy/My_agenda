@@ -3,11 +3,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:my_agenda/core/utils/widgets/customTextField.dart';
 import 'package:my_agenda/features/bottom_sheet/presentation/bloc/botomSheetCubit.dart';
 import 'package:my_agenda/features/bottom_sheet/presentation/bloc/bottomSheetStates.dart';
+import 'package:my_agenda/features/bottom_sheet/presentation/widgets/ColorListView.dart';
 import 'package:my_agenda/features/notes/presentation/Cubit/noteCubit.dart';
-import '../../../notes/presentation/widgets/AddButton.dart';
+import '../../notes/presentation/widgets/AddButton.dart';
 
 class BottomSheetView extends StatefulWidget {
-  BottomSheetView({Key? key}) : super(key: key);
+  const BottomSheetView({Key? key}) : super(key: key);
 
   @override
   State<BottomSheetView> createState() => _BottomSheetViewState();
@@ -55,7 +56,12 @@ class _BottomSheetViewState extends State<BottomSheetView> {
                 SizedBox(
                   height: MediaQuery.of(context).size.height * .03,
                 ),
+                ColorsListView(cubit:cubit),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * .03,
+                ),
                 AddButton(cubit:cubit,autoValid:autoValidateFunction),
+
                 SizedBox(
                   height: MediaQuery.of(context).size.height * .02,
                 ),

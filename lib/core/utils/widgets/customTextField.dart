@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../colors.dart';
 
 class CustomTextField extends StatelessWidget {
-  CustomTextField({Key? key, required this.label, this.controller,this.maxLines}) : super(key: key);
+  CustomTextField({Key? key, required this.label, this.controller,this.maxLines,this.onChanged}) : super(key: key);
   final String label;
   final TextEditingController? controller;
   Function(String)? onChanged;

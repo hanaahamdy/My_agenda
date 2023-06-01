@@ -4,7 +4,6 @@ import 'package:my_agenda/features/EditNote/presentaion/Widgets/editView.dart';
 import 'package:my_agenda/features/notes/presentation/Cubit/noteCubit.dart';
 
 import '../../../../core/utils/colors.dart';
-import '../../../EditNote/presentaion/editViewBody.dart';
 import '../../data/NoteModel.dart';
 
 class NoteItem extends StatelessWidget {
@@ -14,6 +13,7 @@ class NoteItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return GestureDetector(onTap: (){
 Navigator.push(context, MaterialPageRoute(builder: (context){
   return EditScreen(noteModel: note,);
@@ -24,7 +24,7 @@ Navigator.push(context, MaterialPageRoute(builder: (context){
         margin: EdgeInsets.only(bottom: MediaQuery.of(context).size.height * .02),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          color: Colors.teal,
+          color: Color(note.color)
         ),
         child: Column(
           children: [

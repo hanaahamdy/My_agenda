@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_agenda/features/notes/presentation/widgets/note_view_body.dart';
 
-import '../../bottom_sheet/presentation/widgets/bottomSheetView.dart';
+import '../../bottom_sheet/presentation/bottomSheetView.dart';
 
 class NoteView extends StatelessWidget {
   const NoteView({Key? key}) : super(key: key);
